@@ -1,0 +1,11 @@
+
+<% if comment.id %>
+   <h4> <%= comment.commenter %> </h4>
+   <p> <%= comment.body %> </p>
+   <%= link_to 'Delete', [comment.article, comment], 
+      method: :delete, 
+      data: {confirm: "Are you shure?"}
+   %>
+<% end %>
+
+
